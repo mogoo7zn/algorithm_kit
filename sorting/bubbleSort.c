@@ -1,5 +1,5 @@
 //
-// Created by znwang on 2023/11/09.
+// Created by znwan on 2023/11/09.
 //
 
 #include "sorting_public _headfile.h"
@@ -9,10 +9,8 @@ int main(void) {
     int number, i, j;
     scanf_s("%d", &number);
     int value[number];
-    for(i = 0; i < number; i++)
-    {
-        scanf_s("%d", value + i);
-    }
+
+    generate_array(value, number);
 
     for(i = 0; i < number; i++)
     {

@@ -12,6 +12,7 @@
 
 void swap(int *a, int *b);
 void print_array(int number, int *value);
+int *generate_array(int *value, int number);
 
 void swap(int *a, int *b)
 {
@@ -26,5 +27,14 @@ void print_array(int number, int *value)
     for(i = 0; i < number; i++)
     {
         printf_s("%d ", value[i]);
+    }
+}
+
+int *generate_array(int *value, int number)
+{
+    int i;
+    for(i = 0; i < number; i++)
+    {
+        scanf_s("%d", value + i);
     }
 }
