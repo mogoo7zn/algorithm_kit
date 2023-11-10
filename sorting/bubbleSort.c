@@ -5,7 +5,6 @@
 #include "sorting_public _headfile.h"
 //#define SWAP(type, a, b) (type temp = (a), (a) = (b), (b) = temp)
 
-void swap(int *a, int *b);
 int main(void) {
     int number, i, j;
     scanf_s("%d", &number);
@@ -30,12 +29,4 @@ int main(void) {
         printf_s("%d ", value[i]);
     }
     return 0;
-}
-
-void swap(int *a, int *b)
-{
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
 }
