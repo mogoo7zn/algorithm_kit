@@ -1,15 +1,27 @@
 //
 // Created by znwan on 2023/11/10.
 //
-#include "sorting_public _headfile.h"
+#include "sorting_public_headfile.h"
 
+void selectionSort(int *value, int number);
 int main(void) {
-    int number, i, j;
+    int number;
     scanf_s("%d", &number);
     int value[number];
 
     generate_array(value, number);
 
+    selectionSort(value, number);
+
+    print_array(number, value);
+
+    return 0;
+}
+
+void selectionSort(int *value, int number)
+{
+    int i, j;
+    //    pick out the smallest number after value[i] in the array and swap it with value[i]
     for(i = 0; i < number - 1; i++)
     {
         int min = value[i], position = i;
@@ -24,8 +36,4 @@ int main(void) {
         j--;
         swap(value + i, value + position);
     }
-
-    print_array(number, value);
-
-    return 0;
 }
